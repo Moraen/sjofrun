@@ -21,20 +21,28 @@
     }
 
     header {
-      height: 30vh;
-      width: 100%;
       position: absolute;
-      top: 0;
     }
 
     #karta {
+      height: 30vh;
+      width: 100%;
       z-index: 0;
+      top: 0;
     }
 
     #logo {
-      display: none;
+      height: 20vh;
+      width: 50%;
+      margin-left: 10px;
+      top: 5vh;
       z-index: 1;
+      background-image: url('img/sjofrun-3.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
+
 
     nav {
       margin-top: 30vh;
@@ -127,9 +135,11 @@
   <!-- Include the Google Maps API library - required for embedding maps -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpBs-WL4U71205Nwh9Nz1cixWA70bR0tg"></script>
   <script type="text/javascript">
-    var position = [63.8081453,20.3400352];
+    var marker = [63.805701,20.3403003];
+    var center = [63.805729,20.3382403];
     function showGoogleMaps() {
-        var latLng = new google.maps.LatLng(position[0], position[1]);
+        var latLngcenter = new google.maps.LatLng(center[0], center[1]);
+        var latLngmarker = new google.maps.LatLng(marker[0], marker[1]);
         var mapOptions = {
             zoom: 16, // initialize zoom level - the max value is 21
             streetViewControl: false, // hide the yellow Street View pegman
@@ -138,7 +148,7 @@
             fullscreenControl: false,
             scaleControl: false, // not allow users to zoom the Google Map
             mapTypeId: google.maps.MapTypeId.SATELLITE,
-            center: latLng
+            center: latLngcenter
         };
 
         map = new google.maps.Map(document.getElementById('karta'),
@@ -146,7 +156,7 @@
 
         // Show the default red marker at the location
         marker = new google.maps.Marker({
-            position: latLng,
+            position: latLngmarker,
             map: map,
             draggable: false,
             animation: google.maps.Animation.DROP
@@ -159,10 +169,10 @@
 </head>
 <body>
   <header id="karta">
-
+    &nbsp;
   </header>
   <header id="logo">
-    <img class="icon" src="img/logo.png">
+    &nbsp;
   </header>
   <nav>
     <div class="icon">
