@@ -46,7 +46,7 @@
 
     nav {
       margin-top: 30vh;
-      height: 6em;
+      height: 150px;
       width:100%;
       background-color: #ededed;
       display: flex;
@@ -57,7 +57,7 @@
     }
 
     div.icon {
-      flex: 0 0 6em;
+      flex: 0 0 100px;
       margin-left: 10px;
       margin-right: 10px;
       padding: 0;
@@ -69,7 +69,19 @@
 
     img.icon {
       flex: auto;
-      height: 3em;
+      height: 100px;
+    }
+
+    @media screen and (max-width: 550px) {
+      nav {
+        height: 100px;
+      }
+      img.icon {
+        height: 20px;
+      }
+      span.icon {
+        font-size: 0.8em;
+      }
     }
 
     img.icon:hover {
