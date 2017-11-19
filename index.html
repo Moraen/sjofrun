@@ -45,116 +45,42 @@
       background-size: contain;
     }
 
-
     nav {
       margin-top: 30vh;
-      height: 150px;
-      width:100%;
-      background-color: #ededed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-wrap: wrap;
+      padding-top:10px;
+      width: 100%;
     }
 
-    div.icon {
-      flex: 0 0 100px;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-flow: column;
+    .card {
+      width:130px;
+      border: none;
       cursor: pointer;
     }
 
-    img.icon {
-      flex: auto;
-      height: 100px;
+    .card-img-top {
       transition: filter 0.5s ease;
     }
-
-    span.icon {
-      font-size: 0.9em;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    @media screen and (max-width: 550px) {
-      nav {
-        height: 150px;
-      }
-
-      div.icon {
-        flex-basis: 40%;
-      }
-
-      img.icon {
-        height: 30px;
-      }
-
-      span.icon {
-        font-size: 0.8em;
-      }
-    }
-
-    img.icon:hover {
+    .card-img-top:hover {
       filter: grayscale(80%);
     }
 
-    span.icon {
-      flex: auto;
+    .card-title {
+      font-size:0.8em;
     }
 
     article {
       width:100%;
-      display: flex;
-      justify-content: center;
-      align-items:stretch;
-      align-content:center;
-      flex-wrap: wrap;
+      padding: 10px;
     }
 
     section {
-      margin: 10px;
+      padding-top:10px;
     }
 
-    #text {
-      flex: 0 0 40%;
-    }
-
-    #kontakt {
-      flex: 0 0 10%;
-      text-align: right;
-    }
-
-    .btn-facebook {
-	  background: #3B5998;
-	  border-radius: 0;
-	  color: #fff;
-	  border-width: 1px;
-	  border-style: solid;
-	  border-color: #263961;
-	}
-
-  .btn-facebook:link, .btn-facebook:visited {
-  color: #fff;
-}
-.btn-facebook:active, .btn-facebook:hover {
-  background: #263961;
-  color: #fff;
-}
 
     footer {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-content: stretch;
-      flex-wrap: wrap;
-      padding-top: 30px;
+      padding: 20px;
       margin-top: 50px;
       background-color: #222222;
       background-image: url("img/moraen_bg.jpg");
@@ -163,25 +89,23 @@
       -webkit-box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,0.75);
       -moz-box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,0.75);
       box-shadow: inset 0px 10px 10px -5px rgba(0,0,0,0.75);
-      color:#ffffff;
-    }
-
-    div.subsection {
-      flex: 1 1 200px;
-      padding: 20px;
     }
 
     div.moraen {
-      text-align: center;
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
     }
-
     img.moraen {
-      width: 200px;
+      width: 100px;
     }
 
-    h3 {
-      margin-top:20px;
+    @media screen and (max-width: 991px) {
+      #kontakt {
+        order:-1;
+      }
     }
+
   </style>
 
 
@@ -228,41 +152,70 @@
   <header id="logo">
     &nbsp;
   </header>
-  <nav>
-    <div class="icon" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-        <img class="icon" src="img/infopaerm.png">
-        <span class="icon">Infopärm</span>
+  <div class="container-fluid">
+  <nav class="row justify-content-center align-content-center">
+    <div class="col">
+    <div class="card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+        <img class="card-img-top" src="img/infopaerm.png">
+        <div class="card-body">
+          <h6 class="card-title text-center">Infopärm</h6>
+        </div>
     </div>
-    <div class="icon" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-      <img class="icon" src="img/graesklippare.png">
-      <span class="icon">Gräsklippning</span>
+  </div>
+  <div class="col">
+    <div class="card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top" src="img/graesklippare.png">
+      <div class="card-body">
+        <h6 class="card-title text-center">Gräsklippning</h6>
+      </div>
     </div>
-    <div class="icon" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-      <img class="icon" src="img/tv.png">
-      <span class="icon">TV & Fiber</span>
+  </div>
+  <div class="col">
+    <div class="card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top" src="img/tv.png">
+      <div class="card-body">
+        <h6 class="card-title text-center">TV & Fiber</h6>
+      </div>
     </div>
-    <div class="icon" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-      <img class="icon img" src="img/felanmalan.png">
-      <span class="icon">Felanmälan</span>
+  </div>
+  <div class="col">
+    <div class="card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top" src="img/felanmalan.png">
+      <div class="card-body">
+        <h6 class="card-title text-center">Felanmälan</h6>
+      </div>
     </div>
+  </div>
+
+  <div class="col">
+    <div class="card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top" src="img/felanmalan.png">
+      <div class="card-body">
+        <h6 class="card-title text-center">Årsmöte</h6>
+      </div>
+    </div>
+  </div>
+
   </nav>
-  <article>
-    <section id="text">
+  <article class="row">
+    <section class="col-12 col-lg-8">
       <h1>Aktuellt</h1>
       <p>Träutensilierna i ett tryckeri äro ingalunda en
         faktor där trevnadens ordningens och ekonomiens upprätthållande,
         och dock är det icke sällan som sorgliga erfarenheter göras ordningens
         och ekon och miens därmed upprätthållande.</p>
     </section>
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <a href="https://www.facebook.com/pg/Sjöfruns-samfällighetsförening-Tomtebo-348557935240083" target="_blank" title="Facebook" class="btn btn-facebook btn-sm btn-block"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
-      <h3>Styrelsen</h3>
 
+
+    <section id="kontakt" class="col-12 col-lg-4">
+      <a href="mailto:sjofrunsstyrelse@gmail.com" target="_blank" title="sjofrunsstyrelse@gmail.com" class="btn btn-success btn-lg btn-block"><i class="fa fa-envelope fa-fw"></i> sjofrunsstyrelse@gmail.com</a>
+      <a href="https://www.facebook.com/pg/Sjöfruns-samfällighetsförening-Tomtebo-348557935240083" target="_blank" title="Facebook" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
     </section>
   </article>
+</div>
+
   <footer>
-    <div class="subsection moraen">
+    <div class="moraen">
       <a href="http://moraen.se" target="_blank"><img class="moraen" src="img/moraen_logo_grunge.png" alt="Design av Morän"></a>
     </div>
   </footer>
