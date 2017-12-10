@@ -51,21 +51,35 @@
       width: 100%;
     }
 
-    .menu-card {
+    .card {
       width:130px;
       border: none;
       cursor: pointer;
     }
 
-    .menu-card-img-top {
+    .card-img-top {
       transition: filter 0.5s ease;
     }
-    .menu-card-img-top:hover {
+    .card-img-top:hover {
       filter: grayscale(80%);
     }
 
-    .menu-card-title {
+    .card-title {
       font-size:0.8em;
+    }
+
+    #mobile-nav {
+      display: none;
+    }
+
+    .menu-img {
+      width: 50px;
+      float:left;
+      margin-right: 20px;
+    }
+
+    .menu-title {
+      line-height: 50px;
     }
 
     article {
@@ -155,12 +169,6 @@
       width: 100px;
     }
 
-    @media screen and (max-width: 991px) {
-      #kontakt {
-
-      }
-    }
-
     @media screen and (max-width: 700px) {
       #karta {
         display: none;
@@ -170,6 +178,14 @@
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
+      }
+
+      #wide-nav {
+        display: none;
+      }
+
+      #mobile-nav {
+        display: flex;
       }
     }
 
@@ -220,50 +236,96 @@
     &nbsp;
   </header>
   <div class="container-fluid">
-  <nav class="row justify-content-center align-content-center">
+
+  <nav id="wide-nav" class="row justify-content-center align-content-center">
     <div class="col">
-    <div class="card menu-card mx-auto" onclick="window.open('https://drive.google.com/file/d/1NKxWlKXxKc-qktG2gYp94S9ORDdbTA1F/view?usp=sharing','_blank');">
-        <img class="card-img-top menu-card-img-top" src="img/infopaerm.png">
-        <div class="card-body menu-card-body">
-          <h6 class="card-title menu-card-title text-center">Infopärm</h6>
+    <div class="card  mx-auto" onclick="window.open('https://drive.google.com/file/d/1NKxWlKXxKc-qktG2gYp94S9ORDdbTA1F/view?usp=sharing','_blank');">
+        <img class="card-img-top" src="img/infopaerm.png">
+        <div class="card-body">
+          <h6 class="card-title  text-center">Infopärm</h6>
         </div>
     </div>
   </div>
   <div class="col">
-    <div class="card menu-card mx-auto" onclick="window.open('https://drive.google.com/file/d/1JJ7p3KsqpZS1yf2jhwAS3dOtt9Lz_frK/view?usp=sharing','_blank');">
-      <img class="card-img-top menu-card-img-top" src="img/graesklippare.png">
-      <div class="card-body menu-card-body">
-        <h6 class="card-title menu-card-title text-center">Gräsklippning</h6>
+    <div class="card  mx-auto" onclick="window.open('https://drive.google.com/file/d/1JJ7p3KsqpZS1yf2jhwAS3dOtt9Lz_frK/view?usp=sharing','_blank');">
+      <img class="card-img-top " src="img/graesklippare.png">
+      <div class="card-body ">
+        <h6 class="card-title  text-center">Gräsklippning</h6>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card menu-card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-      <img class="card-img-top menu-card-img-top" src="img/tv.png">
-      <div class="card-body menu-card-body">
-        <h6 class="card-title menu-card-title text-center">TV & Fiber</h6>
+    <div class="card  mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top " src="img/tv.png">
+      <div class="card-body ">
+        <h6 class="card-title  text-center">TV & Fiber</h6>
       </div>
     </div>
   </div>
   <div class="col">
-    <div class="card menu-card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-      <img class="card-img-top menu-card-img-top" src="img/felanmaelan.png">
-      <div class="card-body menu-card-body">
-        <h6 class="card-title menu-card-title text-center">Felanmälan</h6>
+    <div class="card  mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top " src="img/felanmaelan.png">
+      <div class="card-body ">
+        <h6 class="card-title  text-center">Felanmälan</h6>
       </div>
     </div>
   </div>
 
   <div class="col">
-    <div class="card menu-card mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
-      <img class="card-img-top menu-card-img-top" src="img/aorsmoete.png">
-      <div class="card-body menu-card-body">
-        <h6 class="card-title menu-card-title text-center">Årsmöte</h6>
+    <div class="card  mx-auto" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="card-img-top " src="img/aorsmoete.png">
+      <div class="card-body ">
+        <h6 class="card-title  text-center">Årsmöte</h6>
       </div>
     </div>
   </div>
 
   </nav>
+
+  <nav id="mobile-nav" class="d-flex flex-column justify-content-center align-content-center">
+
+    <div class="menu-row" onclick="window.open('https://drive.google.com/file/d/1NKxWlKXxKc-qktG2gYp94S9ORDdbTA1F/view?usp=sharing','_blank');">
+        <img class="menu-img" src="img/infopaerm.png">
+        <div class="menu-text">
+          <h6 class="menu-title">Infopärm</h6>
+        </div>
+    </div>
+
+    <div class="menu-row" onclick="window.open('https://drive.google.com/file/d/1JJ7p3KsqpZS1yf2jhwAS3dOtt9Lz_frK/view?usp=sharing','_blank');">
+      <img class="menu-img" src="img/graesklippare.png">
+      <div class="menu-text">
+        <h6 class="menu-title">Gräsklippning</h6>
+      </div>
+    </div>
+
+    <div class="menu-row" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="menu-img" src="img/tv.png">
+      <div class="menu-text">
+        <h6 class="menu-title">TV & Fiber</h6>
+      </div>
+    </div>
+
+
+    <div class="menu-row" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="menu-img" src="img/felanmaelan.png">
+      <div class="menu-text">
+        <h6 class="menu-title">Felanmälan</h6>
+      </div>
+    </div>
+
+
+
+    <div class="menu-row" onclick="window.open('https://www.dropbox.com/s/m7xsojm9s3sd31j/Lorem-Ipsum.pdf?dl=0','_blank');">
+      <img class="menu-img" src="img/aorsmoete.png">
+      <div class="menu-text">
+        <h6 class="menu-title">Årsmöte</h6>
+      </div>
+    </div>
+
+
+  </nav>
+
+
   <article class="row">
     <section class="col-12 col-lg-5">
       <h2>Aktuellt</h2>
